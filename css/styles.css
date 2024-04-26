@@ -1,0 +1,90 @@
+.continer{
+    background-image: url("https://images.unsplash.com/photo-1597072689227-8882273e8f6a?q=80&w=2235&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    min-height: 100vh;
+    background-size: 1000px 100%;
+    width: ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body{
+    text-align: center;
+}
+h1, h2{
+    font-family: fantasy;
+}
+h1{    
+    text-decoration: underline;
+}
+.task-div{
+    border: solid black 1px;
+    border-radius: 30px;
+    aspect-ratio: 1 / 1;
+    overflow-x:auto;
+    position: relative;
+}
+.notesContainer {
+    max-width: 800px;
+    gap: 25px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.task-div i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.task-data-div{
+    height: 70%;
+    overflow-y: auto;
+    /* background-color: rgb(57, 101, 138); */
+}
+.task-div i:hover{
+    opacity: 1;
+}
+.date-element{
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+    opacity: 0;
+}
+.time-element{
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+    opacity: 0;
+}
+.task-div:hover .time-element,
+.task-div:hover .date-element {
+opacity: 1;
+}
+.task-data{
+    overflow-wrap: break-word;
+}
+textarea{
+    border-radius: 30px;
+    text-align: center;
+    background-color: transparent;
+}
+input[type = "date"]{
+    border-radius: 30px;
+    background-color: transparent;
+}
+input[type = "time"]{
+    border-radius: 30px;
+    background-color: transparent;
+}
+button{
+    border-radius: 30px;
+    margin-top: 10px;
+    background-color: transparent;
+
+}
+@media(max-width:768px){
+    .notesContainer{
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
